@@ -412,3 +412,10 @@ it:
     nds_course: Corso BDNS (solo partecipanti)
     nds_camp: Campo BDNS (solo partecipanti)
     slrg: Corso SSS (solo partecipanti)
+
+  dropdown/applications_export:
+    button: "esportare"
+    vcard: "vCard"
+    emails: "indirizzi email"
+    emails_comma_separated: "Komma getrennt (Apple Mail, Thunderbird, ...)"
+    emails_semicolon_separated: "Semikolon getrennt (Outlook)"

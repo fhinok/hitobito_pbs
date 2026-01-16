@@ -411,3 +411,10 @@ de:
     nds_course: NDS-Kurs (nur TN)
     nds_camp: NDS-Lager (nur TN)
     slrg: SLRG-Kurs (nur TN)
+
+  dropdown/applications_export:
+    button: "Export"
+    vcard: "vCard"
+    emails: "E-Mail Adressen"
+    emails_comma_separated: "Komma getrennt (Apple Mail, Thunderbird, ...)"
+    emails_semicolon_separated: "Semikolon getrennt (Outlook)"

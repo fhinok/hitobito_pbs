@@ -6,9 +6,23 @@
 module Pbs::Event::ApplicationMarketController
   extend ActiveSupport::Concern
 
+  include RenderPeopleExports
+
   included do
     alias_method_chain :put_on_waiting_list, :setter
     alias_method_chain :remove_from_waiting_list, :setter
+
+  def index
+    @participants = load_participants
+    @applications = sort_and_decorate(load_applications)
+
+    respond_to do |format|
+      format.html
+      format.vcf { render_vcf(@applications.map(&:person)) }
+      format.email { render_emails(@applications.map(&:person), ",") }
+      format.email_outlook { render_emails(@applications.map(&:person), ";") }
+    end
+  end
 
     def assigner_add_participant
       # rubocop:todo Layout/LineLength
